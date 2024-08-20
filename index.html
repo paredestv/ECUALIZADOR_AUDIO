@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecualizador de Audio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="equalizer-container">
+        <h2>Ecualizador de Audio</h2>
+        <!---Con audio integrado-->
+        
+        <audio id="audio-player" controls>
+            <source src="audio/05-Elvis Presley _Always On My Mind.mp3" type="audio/mp3">
+            Tu navegador no soporta el reproductor de audio.
+        </audio>
+
+        <div class="controls">
+            <div class="control">
+                <label for="bass">Bajos</label>
+                <input id="bass" type="range" min="0" max="100" value="50">
+            </div>
+            <div class="control">
+                <label for="mid">Medios</label>
+                <input id="mid" type="range" min="0" max="100" value="50">
+            </div>
+            <div class="control">
+                <label for="treble">Agudos</label>
+                <input id="treble" type="range" min="0" max="100" value="50">
+            </div>
+        </div>
+
+        <div id="output">
+            <p>Bajos: <span id="bass-value">50</span></p>
+            <p>Medios: <span id="mid-value">50</span></p>
+            <p>Agudos: <span id="treble-value">50</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
